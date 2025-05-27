@@ -8,6 +8,6 @@ package carticas;
  *
  * @author Daniel
  */
-public class juegocartas {
+public class ColaTurnos {
     
 }
