@@ -1,3 +1,4 @@
+package carticas;
 import java.util.*;
 
 public class Jugador {
