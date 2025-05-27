@@ -1,3 +1,4 @@
+package carticas;
 public class Carta {
     String numer;
     String palo;
