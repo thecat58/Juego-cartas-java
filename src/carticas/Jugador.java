@@ -12,7 +12,11 @@ public class Jugador {
 
     public void recibirCarta(Carta carta) {
         mano.add(carta);
-        puntos += carta.obtenerValor();
+        int valor = carta.obtenernumer();
+        if (valor == 1 && puntos + 11 <= 21) {
+            valor = 11; // El As vale 11 si no supera 21
+        }
+        puntos += valor;
     }
 
     public void mostrarMano() {

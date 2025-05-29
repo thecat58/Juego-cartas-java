@@ -4,6 +4,12 @@
  */
 package carticas;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+
 /**
  *
  * @author KIKE
@@ -25,7 +31,7 @@ public class Carticas {
         HashMap<String, Jugador> jugadores = new HashMap<>();
 
         // creemos un trree para desiscione 
-        NodoDecision raiz = new Arbol.NodoDecision(17, "Plantarse");
+        Arbol.NodoDecision raiz = new Arbol.NodoDecision(17, "Plantarse");
         raiz.izquierda = new Arbol.NodoDecision(17, "dar");
         raiz.derecha = new Arbol.NodoDecision(17, "Plantarse");
 

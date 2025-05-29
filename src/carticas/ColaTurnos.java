@@ -1,19 +1,37 @@
 package carticas;
 
-import java.util.LinkedList;
-import java.util.Queue;
+class NodoCola {
+    String jugador;
+    NodoCola siguiente;
+
+    public NodoCola(String jugador) {
+        this.jugador = jugador;
+        this.siguiente = null;
+    }
+}
 
 public class ColaTurnos {
-    Queue<String> cola = new LinkedList<>();
+    private NodoCola frente, fin;
 
     public void agregarJugador(String nombre) {
-        cola.add(nombre);
+        NodoCola nuevo = new NodoCola(nombre);
+        if (fin != null) {
+            fin.siguiente = nuevo;
+        }
+        fin = nuevo;
+        if (frente == null) {
+            frente = fin;
+        }
     }
 
     public String siguienteTurno() {
-        String actual = cola.poll();
-        cola.add(actual);
-        return actual;
+        if (frente == null) return null;
+        String jugador = frente.jugador;
+        frente = frente.siguiente;
+        if (frente == null) {
+            fin = null;
+        }
+        return jugador;
     }
 }
 

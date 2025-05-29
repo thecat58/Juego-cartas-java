@@ -22,4 +22,20 @@ public class Carta {
 
     }
 
+
+    public String getNombre() {
+        return numer;
+    }
+
+    public String getPalo() {
+        return palo;
+    }
+
+    public void setNumer(String numer) {
+        this.numer = numer;
+    }
+
+    public void setPalo(String palo) {
+        this.palo = palo;
+    }
 }
